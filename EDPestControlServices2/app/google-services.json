@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "961031275308",
+    "project_id": "ed-pest-control-services",
+    "storage_bucket": "ed-pest-control-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961031275308:android:7c18246dc9272a1c91e289",
+        "android_client_info": {
+          "package_name": "com.example.edpestcontrolservices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961031275308-fvn3b3i25t7u75u7g4rs48o35umjtq2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVc0Y0vO_2fqDTg4xNqH2taJ9DllqmEc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961031275308-fvn3b3i25t7u75u7g4rs48o35umjtq2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

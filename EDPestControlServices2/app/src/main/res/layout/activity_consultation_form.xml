@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/consult_bg"
+    tools:context=".ConsultationForm"
+    android:splitMotionEvents="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:splitMotionEvents="false">
+
+        <TextView
+            android:id="@+id/consultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="CONSULTATION FORM"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Let us know what you are experiencing"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consultTitle" />
+
+        <TextView
+            android:id="@+id/question1Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="What preventions have your already tried?"
+            app:layout_constraintBottom_toTopOf="@+id/preventionInput"
+            app:layout_constraintStart_toStartOf="@+id/preventionInput"
+            app:layout_constraintTop_toBottomOf="@+id/titleSubTitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/preventionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:inputType="textMultiLine"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question1Title" />
+
+        <Spinner
+            android:id="@+id/spinnerConsult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/houseSizeTitle" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question2Title">
+
+            <RadioButton
+                android:id="@+id/days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Days"
+                android:buttonTint="@android:color/holo_red_dark"/>
+
+            <RadioButton
+                android:id="@+id/weeks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:text="Weeks" />
+
+            <RadioButton
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:text="Months" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/question2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="How long has this problem been going?"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preventionInput" />
+
+        <TextView
+            android:id="@+id/houseSizeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="House Size"
+            app:layout_constraintStart_toStartOf="@+id/spinnerConsult"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <TextView
+            android:id="@+id/materialTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Material Type"
+            app:layout_constraintStart_toStartOf="@+id/plastic"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerConsult" />
+
+        <CheckBox
+            android:id="@+id/plastic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Plastic"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTitle" />
+
+        <CheckBox
+            android:id="@+id/cement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Cement"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plastic" />
+
+        <CheckBox
+            android:id="@+id/wood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Wood"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cement" />
+
+        <TextView
+            android:id="@+id/verminTypeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Vermin Type"
+            app:layout_constraintStart_toStartOf="@+id/wood"
+            app:layout_constraintTop_toBottomOf="@+id/wood" />
+
+        <CheckBox
+            android:id="@+id/rat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Rat"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="@+id/verminTypeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/verminTypeTitle" />
+
+        <CheckBox
+            android:id="@+id/mice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Mice"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/rat"
+            app:layout_constraintStart_toStartOf="@+id/cockroaches"
+            app:layout_constraintTop_toTopOf="@+id/rat" />
+
+        <CheckBox
+            android:id="@+id/wasps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Wasps"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/mice"
+            app:layout_constraintStart_toStartOf="@+id/mosquitoes"
+            app:layout_constraintTop_toTopOf="@+id/mice" />
+
+        <CheckBox
+            android:id="@+id/flies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Flies"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wasps" />
+
+        <CheckBox
+            android:id="@+id/ants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Ants"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/flies"
+            app:layout_constraintStart_toStartOf="@+id/cockroaches"
+            app:layout_constraintTop_toBottomOf="@+id/rat" />
+
+        <CheckBox
+            android:id="@+id/bedBugs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Bed Bugs"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/ants"
+            app:layout_constraintStart_toStartOf="@+id/mosquitoes"
+            app:layout_constraintTop_toBottomOf="@+id/mice" />
+
+        <CheckBox
+            android:id="@+id/termites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Termites"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="@+id/flies"
+            app:layout_constraintTop_toBottomOf="@+id/bedBugs" />
+
+        <CheckBox
+            android:id="@+id/cockroaches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Cockroaches"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/termites"
+            app:layout_constraintTop_toBottomOf="@+id/flies" />
+
+        <CheckBox
+            android:id="@+id/mosquitoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Mosquitoes"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/cockroaches"
+            app:layout_constraintTop_toBottomOf="@+id/ants" />
+
+        <TextView
+            android:id="@+id/damagesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Damages"
+            app:layout_constraintStart_toStartOf="@+id/damagesTextInput"
+            app:layout_constraintTop_toBottomOf="@+id/termites" />
+
+        <EditText
+            android:id="@+id/damagesTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.761"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/damagesTitle" />
+
+        <TextView
+            android:id="@+id/entrypointTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Entry Points"
+            app:layout_constraintStart_toStartOf="@+id/damagesTextInput"
+            app:layout_constraintTop_toBottomOf="@+id/damagesTextInput" />
+
+        <CheckBox
+            android:id="@+id/windows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Windows"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="@+id/entrypointTitle"
+            app:layout_constraintTop_toBottomOf="@+id/entrypointTitle" />
+
+        <CheckBox
+            android:id="@+id/doors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Doors"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/windows"
+            app:layout_constraintTop_toTopOf="@+id/windows" />
+
+        <CheckBox
+            android:id="@+id/crevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Crevices"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toStartOf="@+id/windows"
+            app:layout_constraintTop_toBottomOf="@+id/windows" />
+
+        <CheckBox
+            android:id="@+id/vents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Vents"
+            android:buttonTint="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@+id/crevices"
+            app:layout_constraintStart_toStartOf="@+id/doors"
+            app:layout_constraintTop_toTopOf="@+id/crevices" />
+
+        <TextView
+            android:id="@+id/relativesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Relatives in the house?"
+            app:layout_constraintStart_toStartOf="@+id/crevices"
+            app:layout_constraintTop_toBottomOf="@+id/crevices" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/relativesTitle"
+            app:layout_constraintTop_toBottomOf="@+id/relativesTitle">
+
+            <RadioButton
+                android:id="@+id/relativeYes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/relativeNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/childrenQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Children?"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/childrenQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/childrenQuestion">
+
+            <RadioButton
+                android:id="@+id/childrenYes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/childrenNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/petsQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Pets?"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/petsQuestion"
+            app:layout_constraintTop_toBottomOf="@id/petsQuestion">
+
+            <RadioButton
+                android:id="@+id/petsYes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/petsNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/ifYesWhatPet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="If yes, what pet/s?"
+            app:layout_constraintStart_toStartOf="@+id/petsQuestion"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup4" />
+
+        <EditText
+            android:id="@+id/petQuestionAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ifYesWhatPet" />
+
+        <TextView
+            android:id="@+id/concernsQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Any more concerns?"
+            app:layout_constraintStart_toStartOf="@+id/petQuestionAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/petQuestionAnswer" />
+
+        <EditText
+            android:id="@+id/concernsQuestionAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/concernsQuestion" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Submit"
+            android:onClick="storeData"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/concernsQuestionAnswer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

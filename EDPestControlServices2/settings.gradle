@@ -1,0 +1,2 @@
+rootProject.name = "EDPestControlServices"
+include ':app'

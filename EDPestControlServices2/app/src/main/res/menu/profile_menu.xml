@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/prof_dashboard"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/prof_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Account Settings" />
+
+        <item
+            android:id="@+id/prof_signout"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:title="Sign Out" />
+    </group>
+</menu>

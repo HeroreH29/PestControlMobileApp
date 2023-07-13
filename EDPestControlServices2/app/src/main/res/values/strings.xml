@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ED Pest Control Services</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="dashboard">
+        <item>To Estimate</item>
+        <item>To Appoint</item>
+        <item>Completed</item>
+        <item>Cancelled</item>
+    </string-array>
+
+    <string-array name="consultDropdown">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+</resources>
